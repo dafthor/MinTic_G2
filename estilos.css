@@ -1,4 +1,27 @@
 
+/* Pagina index.html */
+
+.margen_input{
+    margin-top: 20px;
+    margin-left: 10px;
+    
+}
+.input-index{
+    color: #fff;   
+    
+    background-color: #198754;
+    border-color: #198754;
+}
+
+header{
+    border-radius: 20px 20px 0px 0px;
+    background-color: rgb(86, 168, 4);
+}
+
+#imgLogo{
+    margin: 10px;
+}
+
 
 /* Pagina registro.html */
 
