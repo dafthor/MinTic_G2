@@ -1,0 +1,45 @@
+
+
+/* Pagina registro.html */
+
+.contenedor{  /*Clase contenedor */
+    margin: 50px auto;
+    width:400px;
+    padding:30px;
+    background: rgba(236, 8, 8, 0.5);
+    border-radius: 10px;
+}
+
+.contenedor h2{     /* Caracteristicas de un elemento (h2) dentro de una clase (contenedor)*/
+    margin:10px 10px 30px;
+    padding:10px;
+    font-size:30px;
+    color: black;
+    text-align: center;
+    background-color: rgb(81, 182, 81);
+}
+
+.contenedor .elemento label{ /* Color texto de los labels */ 
+    color:black;
+}
+
+.contenedor .elemento input{ /* Caracteristicas cajones imput */ 
+    width:100%;
+    padding:10px 0;
+    color:white;
+    background: rgb(101, 101, 201);
+    border:none;
+    border-bottom: 1px solid white;
+    margin-bottom:30px;
+}
+
+.contenedor .elemento input[type="submit"]{  /* Caracteristicas del boton Registrar*/ 
+    background-color:greenyellow;
+    border: none;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 15px;
+    margin-top: 30px;
+    color:black;
+}
