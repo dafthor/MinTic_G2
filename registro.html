@@ -1,14 +1,14 @@
-<!DOCTYPE html>   
-<html>           
+<!DOCTYPE html>
+<html>
     <head>
           <meta charset="utf-8" />
           <title>Registro</title>
-          <link rel='stylesheet' href='estilos.css'/>
+          <link rel='stylesheet' href='estilos.css'/>    <!-- Enlace a la hofa de estilos estilos.css -->
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <link rel="icon" type="image/png" href="LOGO.png" />
         </style>
     <head>
-    
+
         <header>
                 <!-- DIV para el logo  -->
                 <div>
@@ -20,19 +20,19 @@
 
     <body style="background-color: rgb(231, 227, 227);">
 
-        <div class="contenedor">
-
+        <div class="contenedor">  <!-- Inicio del div para  el menu de registro -->
+                                   <!-- Se aplica la clase "contenedor" para darle estilo al formulario -->
             <h2>Registro</h2>
-            <form id="form-registro" name="forma" method="POST" autocomplete="off"> <!-- action: servidor que recibe los datos del formulario-->
+            <form id="form-registro" name="forma" method="POST" autocomplete="off">  <!-- Form  del registro -->
                 <div class="elemento">
                     <label for="username">Username</label>
-                    <input type="text" id="username" name="username" required="true">
+                    <input type="text" id="username" name="username" required="true"> <!-- Caracteristicas boton username. required= hace obligatorio rellenar el campo antes de dar submit  -->
                 </div>
                 <div class="elemento">
-                    <label for="correo">Correo</label>
+                    <label for="correo">Correo</label>  <!-- Elemento label.  for debe corresponderse con el id del input al que esta asociado-->
                     <input type="email" id="correo" name="correo" required="true">
                 </div>
-                <div class="elemento">
+                <div class="elemento">  <!-- Aplicacion de estilos a cada uno de los elementos del formulario -->
                     <label for="password">Contraseña</label>
                     <input type="password" id="password" name="password" required="true">
                 </div>
@@ -44,9 +44,9 @@
                     <input type="submit" id="btn-submit-form" value="Registrar" >
                 </div>
 
-            </form>    
-        </div>
+            </form>
+        </div>   <!-- Fin del div para  el menu de registro -->
 
     </body>
 
-</html>  
+</html>
