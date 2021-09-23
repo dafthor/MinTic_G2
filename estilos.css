@@ -2,19 +2,19 @@
 /* Pagina index.html */
 
 .margen_input{ /* modifique el tamaño de margen de los input */
-    margin-top: 20px;
-    margin-left: 10px;
+    margin: auto;
+    margin-left:20px;
     
 }
 .input-index{
     color: #fff;   
-    background-color: #198754;
-    border-color: #198754;
+    background-color: #ff695f;
+    border-color: #ff695f;
 }
 
 header{
     border-radius: 20px 20px 0px 0px;
-    background-color: rgb(86, 168, 4);
+    background-color: #ff695f;
 }
 
 #imgLogo{
@@ -38,7 +38,7 @@ header{
     font-size:30px;
     color: black;
     text-align: center;
-    background-color: rgb(86, 168, 4);
+    background-color: #ff695f;
     border-radius: 20px 20px 0px 0px;
 }
 
@@ -61,7 +61,7 @@ header{
 
 .contenedor .elemento input[type="submit"]{  /* Caracteristicas del boton Registrar*/ 
     width: 50%;
-    background-color:rgb(86, 168, 4);
+    background-color:#ff695f;
     border: none;
     letter-spacing: 5px;
     text-transform: uppercase;
