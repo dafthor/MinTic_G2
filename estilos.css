@@ -70,3 +70,16 @@ header{
     margin-left: 25%;
     color:black;
 }
+
+.btn {
+    color: #fff;
+    background-color: #ff695f;
+    border-color: #ff695f;
+    margin-top: 2px;
+}
+
+.btn-outline-success{
+    color: #fff;
+    background-color: #ff695f;
+    border-color: #ff695f;
+}
