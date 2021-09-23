@@ -1,9 +1,10 @@
 const formulario =  document.getElementById('form-registro');
 const inputs = document.querySelectorAll('#form-registro input');
 
-formulario.addEventListener('submit',(e) => {  
-    e.preventDefault(); //Funcion para que evitar envio vacio del formulario
+formulario.addEventListener('submit',(e) => {  //Funcion flecha que se ejecuta al presionar REGISTRAR 
+    e.preventDefault(); //Funcion para evitar envio vacio del formulario
 
+        // Acceso  a la informacion ingresada en el formulario
         const inputUsername = document.getElementById('username').value;
         const inputCorreo = document.getElementById('correo').value;
         const inputPassword = document.getElementById('password').value;
@@ -11,7 +12,7 @@ formulario.addEventListener('submit',(e) => {
 
         //! Sprint 2
 
-        //? Campo username
+        //? *Campo username*
         let valor1 = inputUsername;
 
         function checkUsername(valor1){
@@ -26,11 +27,11 @@ formulario.addEventListener('submit',(e) => {
             
         }
 
-        let a = checkUsername(valor1);
-        console.log(valor1);
+        let a = checkUsername(valor1);  //Variable usada en la validacion final
+        console.log("Username: " + valor1);
         console.log(checkUsername(valor1));
 
-        //? Campo e-mail
+        //? *Campo e-mail*
         let valor2 = inputCorreo;
 
         function checkCorreo(valor2){
@@ -44,11 +45,11 @@ formulario.addEventListener('submit',(e) => {
                 }
             }
 
-        let b = checkCorreo(valor2);
-        console.log(valor2);
+        let b = checkCorreo(valor2);  //Variable usada en la validacion final
+        console.log("Correo: "+ valor2);
         console.log(checkCorreo(valor2));
 
-        //? Campo contrasena
+        //? *Campo contrasena*
         let valor3 = inputPassword;
 
         function checkContrasena(valor3){
@@ -62,11 +63,11 @@ formulario.addEventListener('submit',(e) => {
                 }
             }
 
-        let c = checkContrasena(valor3);
-        console.log(valor3);
+        let c = checkContrasena(valor3);  //Variable usada en la validacion final
+        console.log("Contrasena:"+ valor3);
         console.log(checkContrasena(valor3));
 
-        //? Campo confirma contrasena
+        //? *Campo confirma contrasena*
         let valor4 = inputConfirmarContrasena;
 
         function checkConfirmContrasena(valor3,valor4){
@@ -80,17 +81,19 @@ formulario.addEventListener('submit',(e) => {
                 }
             }
 
-        let d = checkConfirmContrasena(valor3,valor4);
-        console.log("eso da: "+d);
+        let d = checkConfirmContrasena(valor3,valor4);  //Variable usada en la validacion final
+        console.log("Confirmacion contrasena: " + valor4);
         console.log(checkConfirmContrasena(valor3,valor4));
 
-    if (a==true && a==b && a==c && a==d){  // Verificacion final
+    if (a==true && a==b && a==c && a==d){  // Verificacion final de todos los campos
         formulario.reset();
+        console.log("Resultado comprobacion: Campos correctos")
         alert("Formulario enviado correctamente");
+        ;
     }
     else{
-        //document.write("<h3>Error en uno de los campos</h3>");
-        alert("Error");
+        console.log("Resultado comprobacion: Campos incorrectos");
+        alert("Error en uno o mas campos");
     }
 
 });
