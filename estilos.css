@@ -71,15 +71,15 @@ header{
     color:black;
 }
 
-.btn {
+.btn   {
     color: #fff;
     background-color: #ff695f;
     border-color: #ff695f;
     margin-top: 2px;
 }
 
-.btn-outline-success{
+::selection {
+    background: #ff695f;
     color: #fff;
-    background-color: #ff695f;
-    border-color: #ff695f;
 }
+
