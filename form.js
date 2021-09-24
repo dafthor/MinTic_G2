@@ -7,8 +7,8 @@ formulario.addEventListener('submit',(e) => {  //Funcion flecha que se ejecuta a
         // Acceso  a la informacion ingresada en el formulario
         const inputUsername = document.getElementById('username').value;
         const inputCorreo = document.getElementById('correo').value;
-        const inputPassword = document.getElementById('password').value;
-        const inputConfirmarContrasena = document.getElementById('confirmarContrasena').value;
+        const inputPassword = document.getElementById('contrasena').value;
+        const inputConfirmarContrasena = document.getElementById('confirmContrasena').value;
 
         //! Sprint 2
 
@@ -56,7 +56,7 @@ formulario.addEventListener('submit',(e) => {  //Funcion flecha que se ejecuta a
             if (valor3 == null || valor3.length == 0 || /^\s+$/.test(valor3) ) { // Validar campo de texto obligatorio
                 return false;
             }
-            else if (/^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,1000}$/.test(valor3) ) { // Validar condiciones contrasena 
+            else if (/^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,20}$/.test(valor3) ) { // Validar condiciones contrasena 
                 return true;
             }else{
                 return false;
@@ -74,12 +74,12 @@ formulario.addEventListener('submit',(e) => {  //Funcion flecha que se ejecuta a
             if (valor4 == null || valor4.length == 0 || /^\s+$/.test(valor4) ) { // Validar campo de texto obligatorio
                 return false;
             }
-            else if (/^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,1000}$/.test(valor4)  && valor4==valor3) { // Validar condiciones contrasena y su igualdad con la contrasena del cuadro anterior
+            else if (/^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,20}$/.test(valor4)  && valor4==valor3) { // Validar condiciones contrasena y su igualdad con la contrasena del cuadro anterior
                 return true;
             }else{
                 return false;
                 }
-            }
+            } 
 
         let d = checkConfirmContrasena(valor3,valor4);  //Variable usada en la validacion final
         console.log("Confirmacion contrasena: " + valor4);
@@ -87,9 +87,8 @@ formulario.addEventListener('submit',(e) => {  //Funcion flecha que se ejecuta a
 
     if (a==true && a==b && a==c && a==d){  // Verificacion final de todos los campos
         formulario.reset();
-        console.log("Resultado comprobacion: Campos correctos")
+        console.log("Resultado comprobacion: Campos correctos");
         alert("Formulario enviado correctamente");
-        ;
     }
     else{
         console.log("Resultado comprobacion: Campos incorrectos");
@@ -98,6 +97,10 @@ formulario.addEventListener('submit',(e) => {  //Funcion flecha que se ejecuta a
 
 });
 
+module.exports = checkUsername;
+module.exports = checkCorreo;
+module.exports = checkContrasena;
+module.exports = checkConfirmContrasena;
 
 //module.exports = {
    // checkUsername,
