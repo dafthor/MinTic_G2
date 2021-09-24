@@ -20,35 +20,27 @@
 
     <body style="background-color: rgb(231, 227, 227);">
 
-        <div class="contenedor">  <!-- Inicio del div para  el menu de registro -->
-                                   <!-- Se aplica la clase "contenedor" para darle estilo al formulario -->
-            <h2>Registro</h2>
-            <form id="form-registro" name="forma" method="POST" autocomplete="off">  <!-- Form  del registro -->
-                <div class="elemento">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username"> <!-- Caracteristicas boton username. required= hace obligatorio rellenar el campo antes de dar submit  -->
-                </div>
-                <div class="elemento">
-                    <label for="correo">Correo</label>  <!-- Elemento label.  for debe corresponderse con el id del input al que esta asociado-->
-                    <input type="email" id="correo" name="correo">
-                </div>
-                <div class="elemento">  <!-- Aplicacion de estilos a cada uno de los elementos del formulario -->
-                    <label for="password">Contraseña</label>
-                    <input type="password" id="password" name="password">
-                </div>
-                <div class="elemento">
-                    <label for="confirmarContrasena">Confirmar contraseña</label>
-                    <input type="password" id="confirmarContrasena" name="confirmarContrasena">
-                </div>
-                <div class="elemento">
-                    <input type="submit" id="btn-submit-form" value="Registrar" >
-                </div>
+        <div class="izquierda"></div>
+        <main>
+      <form id="form-registro" name="forma" method="POST" autocomplete="off"> <!-- action: servidor que recibe los datos del formulario-->
+                  <h2>Registro</h2>
+              <label for="username">Username</label> <br>
+                  <input type="text" id="username" name="username"> <br>
+              <label for="correo">Correo</label><br>
+                  <input type="email" id="correo" name="correo" ><br>
+              <label for="password">Contraseña</label><br>
+                  <input type="password" id="password" name="password"><br>
+              <label for="confirmarContrasena">Confirmar contraseña</label><br>
+                  <input type="password" id="confirmarContrasena" name="confirmarContrasena"><br>
+              <div class="boton">
+                  <input class="btn" type="submit" id="btn-submit-form" value="Registrar">
+              </div>
+      </form>
+      </main>
+        <div class="derecha"></div>
 
-            </form>
-        </div>   <!-- Fin del div para  el menu de registro -->
-            
           <script type="text/javascript" src="form.js"> </script> <!-- conexion con el archivo form.js -->
-        
+
     </body>
 
 </html>

@@ -4,17 +4,18 @@
 .margen_input{ /* modifique el tamaño de margen de los input */
     margin: auto;
     margin-left:20px;
-    
+
 }
 .input-index{
-    color: #fff;   
-    background-color: #ff695f;
-    border-color: #ff695f;
+    color: #fff;
+    background-color: #03a4ed;
+    /*border-color: #ff695f;*/
 }
 
 header{
     border-radius: 20px 20px 0px 0px;
-    background-color: #ff695f;
+    background-color: #03a4ed;
+    padding: 20px;
 }
 
 #imgLogo{
@@ -24,62 +25,98 @@ header{
 
 /* Pagina registro.html */
 
-.contenedor{  /*Clase contenedor */
-    margin: 50px auto;
-    width:30%;
-    /*padding:30px;*/
-    background: whitesmoke;
-    border-radius: 15px;
+
+
+/* Nuevo */
+form {
+    border-radius: 20px;
+    background-color: #fff;
+  }
+
+form label{ /* Color texto de los labels */
+  color:black;
+  padding:10px;
+  margin-left: 20px;
 }
 
-.contenedor h2{     /* Caracteristicas de un elemento (h2) dentro de una clase (contenedor)*/
-    /*margin:10px 10px 30px;*/
-    padding:10px;
-    font-size:30px;
-    color: black;
-    text-align: center;
-    background-color: #ff695f;
-    border-radius: 20px 20px 0px 0px;
-}
-
-.contenedor .elemento label{ /* Color texto de los labels */ 
-    color:black;
-    padding:30px;
-}
-
-.contenedor .elemento input{ /* Caracteristicas cajones imput */ 
-    width: 80%;
+form input{ /* Caracteristicas cajones imput */
+    margin-left: 20px;
     padding:10px;
     color:white;
     background: gray;
     border:none;
     border-bottom: 1px solid white;
-    margin-left: 15px;
     margin-bottom:30px;
     border-radius: 10px;
+    width: 80%;
 }
 
-.contenedor .elemento input[type="submit"]{  /* Caracteristicas del boton Registrar*/ 
-    width: 50%;
-    background-color:#ff695f;
+
+.boton{
+    border: none;
+    text-align: center;
+}
+
+.boton input{
     border: none;
     letter-spacing: 5px;
     text-transform: uppercase;
-    cursor: pointer;
-    padding: 15px;
-    margin-left: 25%;
+    padding: 10px;
+    margin: 10px;
     color:black;
+    border-radius: 15px;
+    background-color: #03a4ed;
+    width: auto;
 }
 
-.btn   {
-    color: #fff;
-    background-color: #ff695f;
-    border-color: #ff695f;
-    margin-top: 2px;
+form h2{     /* Caracteristicas de un elemento (h2) dentro de una clase (contenedor)*/
+    padding:10px;
+    font-size:30px;
+    color: black;
+    text-align: center;
+    background-color: #03a4ed;
+    border-radius: 20px 20px 0px 0px;
 }
 
-::selection {
-    background: #ff695f;
-    color: #fff;
-}
+.izquierda {
+    /*background-color: #fff;*/
+    padding: 20px;
+    float: left;
+    width: 30%; /* The width is 20%, by default */
+  }
 
+  .derecha {
+    /*background-color: #fff;*/
+    padding: 20px;
+    float: left;
+    width: 30%; /* The width is 20%, by default */
+  }
+
+  main {
+    margin: 0;
+    float: left;
+    width: 40%; /* The width is 60%, by default */
+  }
+
+  @media screen and (max-width: 800px) {
+    .izquierda, main, .derecha {
+      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+  }
+
+  * {
+      box-sizing: border-box;
+    }
+
+/* Boton Registrar en Index*/
+    .btn   {
+        color: #fff;
+        background-color: #ff695f;
+        border-color: #ff695f;
+        margin-top: 2px;
+    }
+
+    ::selection {
+        background: #ff695f;
+        color: #fff;
+    }
