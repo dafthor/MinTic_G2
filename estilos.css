@@ -82,20 +82,20 @@ form h2{     /* Caracteristicas de un elemento (h2) dentro de una clase (contene
     /*background-color: #fff;*/
     padding: 20px;
     float: left;
-    width: 30%; /* The width is 20%, by default */
+    width: 35%; /* The width is 20%, by default */
   }
 
   .derecha {
     /*background-color: #fff;*/
     padding: 20px;
     float: left;
-    width: 30%; /* The width is 20%, by default */
+    width: 20%; /* The width is 20%, by default */
   }
 
   main {
     margin: 0;
     float: left;
-    width: 40%; /* The width is 60%, by default */
+    width: 30%; /* The width is 60%, by default */
   }
 
   @media screen and (max-width: 800px) {
