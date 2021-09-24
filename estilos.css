@@ -96,20 +96,20 @@ form input{ /* Caracteristicas cajones imput */
     /*background-color: #fff;*/
     padding: 20px;
     float: left;
-    width: 30%; /* The width is 30%, by default */
+    width: 35%; /* The width is 30%, by default */
   }
 
   .derecha {
     /*background-color: #fff;*/
     padding: 20px;
     float: left;
-    width: 30%; /* The width is 30%, by default */
+    width: 20%; /* The width is 30%, by default */
   }
 
   main {
     margin: 0;
     float: left;
-    width: 40%; /* The width is 40%, by default */
+    width: 30%; /* The width is 40%, by default */
   }
 
   @media screen and (max-width: 800px) {
