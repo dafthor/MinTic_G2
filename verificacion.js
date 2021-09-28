@@ -1,4 +1,4 @@
-console.log("archivo verificacion...");
+// console.log("archivo verificacion...");
 import {
   checkConfirmContrasena,
   checkContrasena,
@@ -6,10 +6,10 @@ import {
   checkUsername,
 } from "./form.js";
 
-// import * as registro from './registro';
+//! OJO ACTIVAR PARA PRUEBAS
+// import { checkUsername } from "./registro.js";
 
 const formulario = document.getElementById("form-registro");
-// const inputs = document.querySelectorAll("#form-registro input");
 
 formulario.addEventListener("submit", (e) => {
   //Funcion flecha que se ejecuta al presionar REGISTRAR
@@ -26,15 +26,18 @@ formulario.addEventListener("submit", (e) => {
   //? *Campo username*
   //Variable usada en la validacion final
   console.log("Validacion Usuario.. " + checkUsername(inputUsername.value));
+  let a = checkUsername(inputUsername.value);
 
   //? *Campo e-mail*
   //Variable usada en la validacion final
   console.log("Correo: " + checkCorreo(inputCorreo.value));
+  let b = checkCorreo(inputCorreo.value);
 
   //? *Campo contrasena*
 
   //Variable usada en la validacion final
   console.log("Contrasena:" + checkContrasena(inputPassword.value));
+  let c = checkContrasena(inputPassword.value);
 
   //? *Campo confirma contrasena*
 
@@ -46,14 +49,18 @@ formulario.addEventListener("submit", (e) => {
         inputConfirmarContrasena.value
       )
   );
+  let d = checkConfirmContrasena(
+    inputPassword.value,
+    inputConfirmarContrasena.value
+  );
 
-  /* if (a==true && a==b && a==c && a==d){  // Verificacion final de todos los campos
-        formulario.reset();
-        console.log("Resultado comprobacion: Campos correctos");
-        alert("Formulario enviado correctamente");
-    }
-    else{
-        console.log("Resultado comprobacion: Campos incorrectos");
-        alert("Error en uno o mas campos");
-    } */
+  if (a == true && a == b && a == c && a == d) {
+    // Verificacion final de todos los campos
+    formulario.reset();
+    console.log("Resultado comprobacion: Campos correctos");
+    alert("Formulario enviado correctamente");
+  } else {
+    console.log("Resultado comprobacion: Campos incorrectos");
+    alert("Error en uno o mas campos");
+  }
 });

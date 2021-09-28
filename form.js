@@ -60,19 +60,13 @@ function checkConfirmContrasena(valor1, valor2) {
   }
 }
 
-/*
-module.exports = checkUsername;
-module.exports = checkCorreo;
-module.exports = checkContrasena;
-module.exports = checkConfirmContrasena;
-*/
-/*
+/* 
 module.exports = {
   checkUsername,
   checkCorreo,
   checkContrasena,
   checkConfirmContrasena,
 };
-*/
+ */
 
 export { checkUsername, checkCorreo, checkContrasena, checkConfirmContrasena };
