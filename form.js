@@ -13,8 +13,6 @@ formulario.addEventListener('submit',(e) => {  //Funcion flecha que se ejecuta a
         //! Sprint 2
 
         //? *Campo username*
-        let valor1 = inputUsername;
-
         function checkUsername(valor1){
             if (valor1 == null || valor1.length > 30 || valor1.length == 0 || /^\s+$/.test(valor1) ) { // Validar campo de texto obligatorio
                 return false;
@@ -27,13 +25,12 @@ formulario.addEventListener('submit',(e) => {  //Funcion flecha que se ejecuta a
             
         }
 
-        let a = checkUsername(valor1);  //Variable usada en la validacion final
+        //Variable usada en la validacion final
         console.log("Username: " + valor1);
         console.log(checkUsername(valor1));
 
         //? *Campo e-mail*
-        let valor2 = inputCorreo;
-
+        
         function checkCorreo(valor2){
             if (valor2 == null || valor2.length == 0 || /^\s+$/.test(valor2) ) { // Validar campo de texto obligatorio
                 return false;
@@ -45,13 +42,11 @@ formulario.addEventListener('submit',(e) => {  //Funcion flecha que se ejecuta a
                 }
             }
 
-        let b = checkCorreo(valor2);  //Variable usada en la validacion final
+         //Variable usada en la validacion final
         console.log("Correo: "+ valor2);
         console.log(checkCorreo(valor2));
 
         //? *Campo contrasena*
-        let valor3 = inputPassword;
-
         function checkContrasena(valor3){
             if (valor3 == null || valor3.length == 0 || /^\s+$/.test(valor3) ) { // Validar campo de texto obligatorio
                 return false;
@@ -62,14 +57,12 @@ formulario.addEventListener('submit',(e) => {  //Funcion flecha que se ejecuta a
                 return false;
                 }
             }
-
-        let c = checkContrasena(valor3);  //Variable usada en la validacion final
+  //Variable usada en la validacion final
         console.log("Contrasena:"+ valor3);
         console.log(checkContrasena(valor3));
 
         //? *Campo confirma contrasena*
-        let valor4 = inputConfirmarContrasena;
-
+        
         function checkConfirmContrasena(valor3,valor4){
             if (valor4 == null || valor4.length == 0 || /^\s+$/.test(valor4) ) { // Validar campo de texto obligatorio
                 return false;
@@ -81,7 +74,7 @@ formulario.addEventListener('submit',(e) => {  //Funcion flecha que se ejecuta a
                 }
             } 
 
-        let d = checkConfirmContrasena(valor3,valor4);  //Variable usada en la validacion final
+         //Variable usada en la validacion final
         console.log("Confirmacion contrasena: " + valor4);
         console.log(checkConfirmContrasena(valor3,valor4));
 
