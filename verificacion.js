@@ -5,7 +5,7 @@ import {
   checkCorreo,
   checkUsername,
 } from "./form.js";
-
+import { filtrarCorreo, obtenerUsername, agregarRegistro } from "./registro.js";
 //! OJO ACTIVAR PARA PRUEBAS
 // import { checkUsername } from "./registro.js";
 
@@ -59,6 +59,11 @@ formulario.addEventListener("submit", (e) => {
     formulario.reset();
     console.log("Resultado comprobacion: Campos correctos");
     alert("Formulario enviado correctamente");
+
+    //! Sprint 3
+    agregarRegistro();
+    obtenerUsername(arreglo);
+    filtrarCorreo(arreglo);
   } else {
     console.log("Resultado comprobacion: Campos incorrectos");
     alert("Error en uno o mas campos");
