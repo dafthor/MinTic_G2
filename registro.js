@@ -54,3 +54,36 @@
 
             console.log("El arreglo filtrado por username es: ");
             console.log(obtenerUsername(arreglo));
+
+
+           //Filtrar Correo
+            function recoCorreo(correo){  // El correo tiene o no hotmail.com?
+                if ( /^([a-z0-9_\.-]+)@(hotmail).(com)$/.test(correo) ) { // Validar condicion numeros
+                    return true;
+                }else{
+                    return false;
+                    }
+                  }
+
+            let matrizCorreos=[];
+
+            function filtrarCorreo(arreglo){
+
+              let arregloT2=[];
+              for (let i = 0; i < arreglo.length; i++) {
+                let arregloT2=[];
+                    for (let j = 1; j < 2; j++){
+                      if (recoCorreo(arreglo[i][j])==false){
+                        continue;
+                      }
+                      else{
+                          for (let k = 0; k < 4; k++) {
+                              arregloT2.push(arreglo[i][k]);
+                          }
+                        }matrizCorreos.push(arregloT2);
+                  }
+              } return matrizCorreos;
+            }
+
+            console.log("El arreglo filtrado por correo es: ");
+            console.log(filtrarCorreo(arreglo));
