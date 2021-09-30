@@ -16,7 +16,7 @@ formulario.addEventListener("submit", (e) => {
   e.preventDefault(); //Funcion para evitar envio vacio del formulario
 
   // Acceso  a la informacion ingresada en el formulario
-  var inputUsername = document.getElementById("username");
+  const inputUsername = document.getElementById("username");
   const inputCorreo = document.getElementById("correo");
   const inputPassword = document.getElementById("contrasena");
   const inputConfirmarContrasena = document.getElementById("confirmContrasena");
@@ -61,7 +61,7 @@ formulario.addEventListener("submit", (e) => {
     alert("Formulario enviado correctamente");
 
     //! Sprint 3
-    agregarRegistro();
+    agregarRegistro(inputUsername.value, inputCorreo.value, inputPassword.value, inputConfirmarContrasena.value);
     obtenerUsername(arreglo);
     filtrarCorreo(arreglo);
   } else {
