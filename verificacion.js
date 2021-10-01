@@ -5,7 +5,12 @@ import {
   checkCorreo,
   checkUsername,
 } from "./form.js";
-import { filtrarCorreo, obtenerUsername, agregarRegistro } from "./registro.js";
+import {
+  filtrarCorreo,
+  obtenerUsername,
+  agregarRegistro,
+  arreglo,
+} from "./registro.js";
 //! OJO ACTIVAR PARA PRUEBAS
 // import { checkUsername } from "./registro.js";
 
@@ -56,16 +61,45 @@ formulario.addEventListener("submit", (e) => {
 
   if (a == true && a == b && a == c && a == d) {
     // Verificacion final de todos los campos
-    formulario.reset();
     console.log("Resultado comprobacion: Campos correctos");
     alert("Formulario enviado correctamente");
 
     //! Sprint 3
-    agregarRegistro(inputUsername.value, inputCorreo.value, inputPassword.value, inputConfirmarContrasena.value);
-    obtenerUsername(arreglo);
-    filtrarCorreo(arreglo);
+    agregarRegistro(
+      inputUsername.value,
+      inputCorreo.value,
+      inputPassword.value
+    ); //, inputConfirmarContrasena.value);
+    console.log("obtener Username cuando guarda");
+    console.log(obtenerUsername(arreglo));
+    console.log("Filtrar correo al guardar");
+    console.log(filtrarCorreo(arreglo));
+    formulario.reset();
   } else {
     console.log("Resultado comprobacion: Campos incorrectos");
     alert("Error en uno o mas campos");
   }
 });
+
+console.log("El Arreglo al cargar 'verficacion.js': ");
+console.log(arreglo);
+
+function verUsernames() {
+  let ar = [];
+  ar = obtenerUsername(arreglo);
+  console.log("Usuarios Obtenidos btn 'verificacion.js':");
+  console.log(ar);
+}
+
+function verCorreos() {
+  let ar = [];
+  ar = filtrarCorreo(arreglo);
+  console.log("Correos Obtenidos btn 'verificacion.js':");
+  console.log(ar);
+}
+
+var usernum = document.getElementById("btnUser");
+usernum.onclick = verUsernames;
+
+var correoHot = document.getElementById("btnCorreos");
+correoHot.onclick = verCorreos;
