@@ -1,85 +1,124 @@
 
 /* Pagina index.html */
 
-.margen_input{ /* modifique el tamaño de margen de los input */
+/*.margen_input{ /* modifique el tamaño de margen de los input
     margin: auto;
     margin-left:20px;
-    
-}
+}*/
+
 .input-index{
-    color: #fff;   
-    background-color: #ff695f;
-    border-color: #ff695f;
+    margin: 10px;
+    color: #fff;
+    background-color: #03a4ed;
+    border-radius: 10px;
+    /*border-color: #ff695f;*/
 }
 
+/*APLICA EN REGISTRO.HTML*/
 header{
     border-radius: 20px 20px 0px 0px;
-    background-color: #ff695f;
+    background-color: #03a4ed;
+    padding: 20px;
 }
 
 #imgLogo{
     margin: 10px;
 }
 
-
-/* Pagina registro.html */
-
-.contenedor{  /*Clase contenedor */
-    margin: 50px auto;
-    width:30%;
-    /*padding:30px;*/
-    background: whitesmoke;
-    border-radius: 15px;
+/* Boton Registrar en Index*/
+.btn   {
+  color: #fff;
+  background-color: #ff695f;
+  border-radius: 10px;
+  margin-bottom: 0%;
+  /*border-color: #ff695f;*/
+  /*margin-top: 2px;*/
 }
 
-.contenedor h2{     /* Caracteristicas de un elemento (h2) dentro de una clase (contenedor)*/
-    /*margin:10px 10px 30px;*/
+/*MODO SELECCION TEXTO EN LOS DOCUMENTOS*/
+::selection {
+  background: #ff695f;
+  color: #fff;
+}
+
+/* Pagina registro.html */
+form {
+    border-radius: 20px;
+    background-color: #fff;
+  }
+
+form h2{     /* Caracteristicas de un elemento (h2) dentro de una clase (contenedor)*/
     padding:10px;
     font-size:30px;
     color: black;
     text-align: center;
-    background-color: #ff695f;
+    background-color: #03a4ed;
     border-radius: 20px 20px 0px 0px;
 }
 
-.contenedor .elemento label{ /* Color texto de los labels */ 
-    color:black;
-    padding:30px;
+form label{ /* Color texto de los labels */
+  color:black;
+  padding:10px;
+  margin-left: 20px;
 }
 
-.contenedor .elemento input{ /* Caracteristicas cajones imput */ 
-    width: 80%;
+form input{ /* Caracteristicas cajones imput */
+    margin-left: 20px;
     padding:10px;
     color:white;
     background: gray;
     border:none;
     border-bottom: 1px solid white;
-    margin-left: 15px;
     margin-bottom:30px;
     border-radius: 10px;
+    width: 80%;
 }
 
-.contenedor .elemento input[type="submit"]{  /* Caracteristicas del boton Registrar*/ 
-    width: 50%;
-    background-color:#ff695f;
+.boton{ /*Division Boton del Formulario*/
+    border: none;
+    text-align: center;
+}
+
+.boton input{ /*Boton del Formulario*/
     border: none;
     letter-spacing: 5px;
     text-transform: uppercase;
-    cursor: pointer;
-    padding: 15px;
-    margin-left: 25%;
+    padding: 10px;
+    margin: 10px;
     color:black;
+    border-radius: 15px;
+    background-color: #03a4ed;
+    width: auto;
 }
 
-.btn   {
-    color: #fff;
-    background-color: #ff695f;
-    border-color: #ff695f;
-    margin-top: 2px;
-}
+/*SECCIONES DE COLUMNAS EN LA PAGINA REGISTRO*/
+.izquierda {
+    /*background-color: #fff;*/
+    padding: 20px;
+    float: left;
+    width: 30%; /* The width is 30%, by default */
+  }
 
-::selection {
-    background: #ff695f;
-    color: #fff;
-}
+  .derecha {
+    /*background-color: #fff;*/
+    padding: 20px;
+    float: left;
+    width: 30%; /* The width is 30%, by default */
+  }
 
+  main {
+    margin: 0;
+    float: left;
+    width: 40%; /* The width is 40%, by default */
+  }
+
+  @media screen and (max-width: 800px) {
+    .izquierda, main, .derecha {
+      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+  }
+
+  /*MODELO DE CAJAS PARA LA VISTA DE REGISTRO*/
+  * {
+      box-sizing: border-box;
+    }
