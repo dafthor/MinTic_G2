@@ -92,13 +92,12 @@ function recoCorreo(correo) {
 
 let matrizCorreos = [];
 function filtrarCorreo(arreglo) {
-  let arregloT2 = [];
-  if (arreglo.forEach(recoCorreo)) {
-    for (let k = 0; k < 4; k++) {
-      arregloT2.push(arreglo[i][k]);
+  matrizCorreos = [];
+  arreglo.forEach(function (element) {
+    if (/^([a-z0-9_\.-]+)@(hotmail).(com)$/.test(element[1])) {
+      matrizCorreos.push(element);
     }
-  }
-  matrizCorreos.push(arregloT2);
+  });
   return matrizCorreos;
 }
 
