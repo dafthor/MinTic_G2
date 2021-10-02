@@ -1,16 +1,16 @@
 let arreglo = [];
-function agregarRegistro(inputUsername, inputCorreo, inputPassword) {
-  arregloNuevo.push(inputUsername);
-  arregloNuevo.push(inputCorreo);
-  arregloNuevo.push(inputPassword);
-  // arregloNuevo.push(inputConfirmarContrasena);
-  arreglo.push(arregloNuevo); //
-  return 0;
+var arregloNuevo = [];
+function agregarRegistro() {
+  arregloNuevo = [];
+  arregloNuevo.push(document.getElementById("username").value);
+  arregloNuevo.push(document.getElementById("correo").value);
+  arregloNuevo.push(document.getElementById("contrasena").value);
+  arreglo.push(arregloNuevo);
+  console.log(arreglo);
 }
 
 let arregloReg = [];
 function obtenerUsername(arreglo) {
-  //Funcion pedida
   arregloReg = [];
   arreglo.forEach(function (element) {
     if (/^[a-zA-Z_/.+-]{1,30}$/.test(element[0])) {
@@ -32,7 +32,7 @@ function filtrarCorreo(arreglo) {
 }
 
 //?Export
-module.export = {
+module.exports = {
   filtrarCorreo,
   obtenerUsername,
   agregarRegistro,
