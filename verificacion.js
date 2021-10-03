@@ -65,11 +65,12 @@ formulario.addEventListener("submit", (e) => {
     alert("Formulario enviado correctamente");
 
     //! Sprint 3
-    agregarRegistro(
-      inputUsername.value,
-      inputCorreo.value,
-      inputPassword.value
-    ); //, inputConfirmarContrasena.value);
+    // agregarRegistro(
+    //   inputUsername.value,
+    //   inputCorreo.value,
+    //   inputPassword.value
+    // ); //, inputConfirmarContrasena.value);
+    agregarRegistro();
     console.log("obtener Username cuando guarda");
     console.log(obtenerUsername(arreglo));
     console.log("Filtrar correo al guardar");
@@ -81,8 +82,8 @@ formulario.addEventListener("submit", (e) => {
   }
 });
 
-console.log("El Arreglo al cargar 'verficacion.js': ");
-console.log(arreglo);
+// console.log("El Arreglo al cargar 'verficacion.js': ");
+// console.log(arreglo);
 
 function verUsernames() {
   let ar = [];
