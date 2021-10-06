@@ -8,15 +8,28 @@ var arregloNuevo = [];
 arregloNuevo = [];
 //function agregarRegistro(inputUsername, inputCorreo, inputPassword) {
 function agregarRegistro() {
+<<<<<<< HEAD
   
   arregloNuevo.push(document.getElementById("username").value);
   // arregloNuevo.push(document.getElementById("correo").value);
   // arregloNuevo.push(document.getElementById("contrasena").value);
 
+=======
+  arregloNuevo = [];
+  // arregloNuevo.push(document.getElementById("username").value);
+  // arregloNuevo.push(document.getElementById("correo").value);
+  // arregloNuevo.push(document.getElementById("contrasena").value);
+  arregloNuevo.push(
+    document.getElementById("username").value,
+    document.getElementById("correo").value,
+    document.getElementById("contrasena").value
+  );
+>>>>>>> 470149bdf1d23af7214a6fcb9266a02d8914aa85
   arreglo.push(arregloNuevo); //
 
   //console.log("guarde correctamente 'agregarRegistro' arreglo:");
   console.log(arreglo);
+  // document.write(arreglo);
 } //Cierre funcion agregarRegistro()
 
 // Obtener Username
@@ -37,9 +50,11 @@ function obtenerUsername(arreglo) {
     if (/^[a-zA-Z_/.+-]{1,30}$/.test(element[0])) {
       //continue
     } else {
-      arregloReg.push(element);
+      arregloReg.push(element[0]);
     }
   });
+  // document.write(arreglo);
+  // document.write(arregloReg);
   return arregloReg;
 }
 // export let arregloReg = [];
@@ -103,7 +118,7 @@ function filtrarCorreo(arreglo) {
   matrizCorreos = [];
   arreglo.forEach(function (element) {
     if (/^([a-z0-9_\.-]+)@(hotmail).(com)$/.test(element[1])) {
-      matrizCorreos.push(element);
+      matrizCorreos.push(element[1]);
     }
   });
   return matrizCorreos;
