@@ -5,12 +5,13 @@ let arreglo = [];
 
 //Agregar registro
 var arregloNuevo = [];
+arregloNuevo = [];
 //function agregarRegistro(inputUsername, inputCorreo, inputPassword) {
 function agregarRegistro() {
-  arregloNuevo = [];
+  
   arregloNuevo.push(document.getElementById("username").value);
-  arregloNuevo.push(document.getElementById("correo").value);
-  arregloNuevo.push(document.getElementById("contrasena").value);
+  // arregloNuevo.push(document.getElementById("correo").value);
+  // arregloNuevo.push(document.getElementById("contrasena").value);
 
   arreglo.push(arregloNuevo); //
 
