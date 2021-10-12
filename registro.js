@@ -8,23 +8,10 @@ var arregloNuevo = [];
 arregloNuevo = [];
 //function agregarRegistro(inputUsername, inputCorreo, inputPassword) {
 function agregarRegistro() {
-<<<<<<< HEAD
-  
   arregloNuevo.push(document.getElementById("username").value);
-  // arregloNuevo.push(document.getElementById("correo").value);
-  // arregloNuevo.push(document.getElementById("contrasena").value);
+  arregloNuevo.push(document.getElementById("correo").value);
+  arregloNuevo.push(document.getElementById("contrasena").value);
 
-=======
-  arregloNuevo = [];
-  // arregloNuevo.push(document.getElementById("username").value);
-  // arregloNuevo.push(document.getElementById("correo").value);
-  // arregloNuevo.push(document.getElementById("contrasena").value);
-  arregloNuevo.push(
-    document.getElementById("username").value,
-    document.getElementById("correo").value,
-    document.getElementById("contrasena").value
-  );
->>>>>>> 470149bdf1d23af7214a6fcb9266a02d8914aa85
   arreglo.push(arregloNuevo); //
 
   //console.log("guarde correctamente 'agregarRegistro' arreglo:");
