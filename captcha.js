@@ -1,4 +1,4 @@
-const formulario = document.getElementById("formulario");
+const formulario = document.getElementById("form-login");
 const capital = "budapest";
 
 formulario.addEventListener("submit", (e) => {
