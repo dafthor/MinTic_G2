@@ -1,25 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <title>Login</title>
+    <link rel='stylesheet' href='estilos.css' /> <!-- Enlace a la hofa de estilos estilos.css -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
-</head>
-<body>
-    <form id="form-login">
-        <p style="background-color: chartreuse;">Iniciar sesión</p>
-        <label for="username/correo">Username</label> <br>
-        <input type="text" name="username/correo" id="username/correo"><br>
-        <label for="contrasena">Contraseña</label><br>
-        <input type="text" name="contrasena" id="contrasena"><br><br>
-        <input type="text" name="captcha" id="captcha" placeholder="CAPTCHA">
-        <p style="background-color: chartreuse;">Login</p>
-        <div class="boton">
-        <input class="btn" type="submit" id="btn-submit-form" value="Aceptar">
-        </div>
+    <link rel="icon" type="image/png" href="assets/images/LOGO.png" />
 
+    </style>
 
-    </form>
-</body>
+    <head>
+
+        <header>
+            <!-- DIV para el logo  -->
+            <div>
+                <a class="navbar-brand" href="index.html" style="color: black; ">
+                    <img src="assets/images/LOGO.png">
+                </a>
+            </div>
+        </header>
+
+    <body style="background-color: rgb(231, 227, 227);">
+        <div class="izquierda"></div>
+        <main>
+            <form id="form-login" name="forma" method="POST" autocomplete="off" style="margin-top: 30px;">
+                <!-- action: servidor que recibe los datos del formulario-->
+                <h2>Iniciar sesión</h2>
+                <label for="username">Username/correo</label> <br>
+                <input type="text" id="username" name="username"> <br>
+
+                <label for="contrasena">Contraseña</label><br>
+                <input type="password" id="contrasena" name="contrasena"><br>
+                
+                <label for="captcha">¿Cuál es la capital de Hungría?.</label><br>
+                <input type="text" id="captcha" name="captcha"><br>
+                
+
+                <div class="boton">
+                    <input class="btn" type="submit" id="btn-submit-form" value="Iniciar sesión">
+                </div>
+            </form>
+
+            
+
+        </main>
+
+        <script src="verificacion.js" type="module"> </script> <!-- conexion con el archivo verificacion.js -->
+    </body>
+
 </html>
