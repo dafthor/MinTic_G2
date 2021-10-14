@@ -1,6 +1,7 @@
 const formulario = document.getElementById("form-login");
 const capital = "budapest";
 let registros = [];
+let arreglo = [];
 var arregloNuevo = [];
 let lista = [];
 let contra;
@@ -18,12 +19,10 @@ function login() {
   });
 
   if (lista.length != 0) {
-    //if (lista.includes(contrasena[2])) {
     if (contrasena == contra) {
       if (captcha) {
         console.log(lista);
         alert("Sesion iniciada correctamente");
-        //return;
       } else {
         alert("Captcha incorrecto");
       }
@@ -35,44 +34,20 @@ function login() {
   }
 }
 
-function agregarRegistros() {
-  for (let i = 0; i < 3; i++) {
-    arregloNuevo = [];
-    arregloNuevo.push(
-      "usuario" + i,
-      "usuario" + i + "@hotmail.com",
-      "Ca12345678"
-    );
-    registros.push([arregloNuevo]);
-  }
+function agregarRegistro() {
+  registros.push(document.getElementById("username").value);
+  // registros.push(document.getElementById("correo").value);
+  // registros.push(document.getElementById("contrasena").value);
 
-  /* arregloNuevo.push(document.getElementById("username").value);
-  arregloNuevo.push(document.getElementById("correo").value);
-  arregloNuevo.push(document.getElementById("contrasena").value); */
-
-  //
-
-  //console.log("guarde correctamente 'agregarRegistro' arreglo:");
-  console.log(registros);
+  arreglo.push(registros);
+  console.log(arreglo);
 }
-
-formulario.addEventListener("submit", (e) => {
-  e.preventDefault(); //Funcion para evitar envio vacio del formulario
-  //agregarRegistros();
-  login();
-  //? llamado a Validacion captcha
-  /* if (validarCAPTCHA()) {
-    alert("RESPUESTAS IGUALES");
-    // Codigo adicional
-  } else {
-    alert("RESPUESTAS INCORRECTA");
-  } */
-});
 
 //! FUNCION validarCAPTCHA
 function validarCAPTCHA(valor) {
   valor = valor.toLowerCase();
   valor = valor.replace(/\s+/g, "");
+  // TODO ELIMINAR CARACTERES ESPECIALES
 
   if (capital == valor) {
     return true;
@@ -80,8 +55,8 @@ function validarCAPTCHA(valor) {
   return false;
 }
 
-agregarRegistros();
-/* module.exports.login = login;
+module.exports.login = login;
 module.exports.registros = registros;
+module.exports.arreglo = arreglo;
 module.exports.validarCAPTCHA = validarCAPTCHA;
-module.exports.agregarRegistros = agregarRegistros; */
+module.exports.agregarRegistro = agregarRegistro;
