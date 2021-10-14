@@ -14,12 +14,11 @@ formulario.addEventListener("submit", (e) => {
 });
 
 //! FUNCION validarCAPTCHA
-function validarCAPTCHA() {
-  let inputRespuesta = document.getElementById("captcha").value;
-  inputRespuesta = inputRespuesta.toLowerCase();
-  inputRespuesta = inputRespuesta.replace(/\s+/g, "");
+function validarCAPTCHA(valor) {
+  valor = valor.toLowerCase();
+  valor = valor.replace(/\s+/g, "");
 
-  if (capital == inputRespuesta) {
+  if (capital == valor) {
     return true;
   }
   return false;
