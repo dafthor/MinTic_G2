@@ -62,7 +62,7 @@ form label{ /* Color texto de los labels */
   margin-left: 20px;
 }
 
-form input{ /* Caracteristicas cajones imput */
+form input { /* Caracteristicas cajones imput */
     margin-left: 20px;
     padding:10px;
     color:white;
@@ -73,7 +73,9 @@ form input{ /* Caracteristicas cajones imput */
     border-radius: 10px;
     width: 80%;
 }
-
+#captcha{
+  width: auto;
+}
 .boton{ /*Division Boton del Formulario*/
     border: none;
     text-align: center;
