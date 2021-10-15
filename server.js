@@ -38,7 +38,7 @@ app.get("/", (req, res) => {
 
 //? Ruta de Registro
 app.get("/registro", (req, res) => {
-  res.sendFile(path.join(staticPath, "/registro.html"));
+  res.sendFile(path.join(staticPath, "registro.html"));
 });
 
 //! Para formulario de registro en futuro
