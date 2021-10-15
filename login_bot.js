@@ -1,62 +1,67 @@
-const formulario = document.getElementById("form-login");
 const capital = "budapest";
-let registros = [];
-let arreglo = [];
-var arregloNuevo = [];
-let lista = [];
-let contra;
+
+let registros = [{ correo: "juan@gmail.com", contrasena: "SecurePassword123" }];
 
 function login() {
-  var userCo = document.getElementById("username/correo").value;
-  var contrasena = document.getElementById("contrasena").value;
-  var captcha = validarCAPTCHA(document.getElementById("captcha").value);
-  lista = [];
-  registros.forEach(function (element) {
-    if (userCo == element[0][0] || userCo == element[0][1]) {
-      lista.push(element);
-      contra = element[0][2];
-    }
-  });
+  var emaillogin = document.getElementById("form-login").elements[0].value;
+  var contrasenalogin = document.getElementById("form-login").elements[1].value;
+  var captcha = (element =
+    document.getElementById("form-login").elements[2].value);
 
-  if (lista.length != 0) {
-    if (contrasena == contra) {
-      if (captcha) {
-        console.log(lista);
-        alert("Sesion iniciada correctamente");
+  var correos = registros.map((el) => el.correo);
+  console.log(correos);
+  var booleano = correos.includes(emaillogin);
+  console.log(booleano);
+
+  var index = correos.indexOf(emaillogin);
+  console.log(index);
+
+  var contrasenas = registros.map((el) => el.contrasena);
+  console.log(contrasenas);
+
+  var contrasenaaway = contrasenas[index];
+  console.log(contrasenaaway);
+
+  if (booleano == true) {
+    if (contrasenaaway == contrasenalogin) {
+      let validar = validarCAPTCHA(captcha);
+      if (validar) {
+        return true;
       } else {
-        alert("Captcha incorrecto");
+        return false;
       }
     } else {
-      alert("Contraseña incorrecta");
+      return false;
     }
   } else {
-    alert("Usuario no encontrado");
+    return false;
   }
 }
 
-function agregarRegistro() {
-  registros.push(document.getElementById("username").value);
-  // registros.push(document.getElementById("correo").value);
-  // registros.push(document.getElementById("contrasena").value);
+// function agregarRegistro() {
+//   arreglo.push(document.getElementById("username").value);
+//   arreglo.push(document.getElementById("correo").value);
+//   arreglo.push(document.getElementById("contrasena").value);
 
-  arreglo.push(registros);
-  console.log(arreglo);
-}
+//   registros.push([arreglo]);
+//   console.log(registros);
+// }
 
 //! FUNCION validarCAPTCHA
 function validarCAPTCHA(valor) {
   valor = valor.toLowerCase();
   valor = valor.replace(/\s+/g, "");
-  // TODO ELIMINAR CARACTERES ESPECIALES
+  valor = valor.replace(/[^a-zA-Z ]/g, "");
 
   if (capital == valor) {
     return true;
   }
   return false;
 }
+module.exports = { login, registros, validarCAPTCHA };
 
-module.exports.login = login;
-module.exports.registros = registros;
-module.exports.arreglo = arreglo;
-module.exports.validarCAPTCHA = validarCAPTCHA;
-module.exports.agregarRegistro = agregarRegistro;
+// module.exports.login = login;
+// module.exports.registros = registros;
+// module.exports.arreglo = arreglo;
+// module.exports.validarCAPTCHA = validarCAPTCHA;
+// module.exports.agregarRegistro = agregarRegistro;
